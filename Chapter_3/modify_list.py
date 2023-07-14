@@ -23,11 +23,16 @@ print(motorcycle)
 print("\nUsing the del statement.")#Remove the items from any know position.
 del motorcycle[1]
 print(motorcycle)
-print("\nUsing the pop method.")#This removes item of the list but allows you access to this item. You can also remoe an item of know position.
+
+#This removes item of the list but allows you access to this item.
+# You can also remoe an item of know position.
+print("\nUsing the pop method.")
 popped_bike = motorcycle.pop()
 print(motorcycle)
 print(popped_bike)
-print("\nUsing the remove method.")#This removes the element of the list by stating the values of this element.
+
+#This removes the element of the list by stating the values of this element.
+print("\nUsing the remove method.")
 motorcycle.remove('ducati')
 print(motorcycle)
 

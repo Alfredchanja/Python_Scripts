@@ -1,6 +1,7 @@
 #Alfred Gachanja
 #06-07-2023
-#This program loops through a dictionary's key-values pairs, its keys, and values.
+#This program loops through a dictionary's key-values pairs,
+# its keys, and values.
 #In this program I learn how to loop through a dictionary.
 
 #Looping through all key value pairs.
@@ -21,7 +22,8 @@ for key, value in user_0.items():
 #Looping through the keys in a dictionary.
 print("\n")
 
-for key in user_0.keys():#You can write this line of the code with or without the keys() method.
+#You can write the below line of the code with or without the keys() method.
+for key in user_0.keys():
     print("Key: " + key)
 
 user_0['username_1'] = 'light_nuru'

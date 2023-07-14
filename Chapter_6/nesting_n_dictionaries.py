@@ -1,7 +1,9 @@
 #Alfred Gachanja
 #11-07-2023
 #In this program I learn how to nest dictionaries.
-#Nesting is simply storing dictionaries in a list, storing a list of values in a dictionary or storing a dictionary inside another dictionary.
+#Nesting is simply storing dictionaries in a list,
+# storing a list of values in a dictionary or
+# storing a dictionary inside another dictionary.
 
 #A list of dictionaries.
 

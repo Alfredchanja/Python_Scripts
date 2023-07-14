@@ -1,7 +1,8 @@
 #Alfred Gachanja
 #06-07-2023
 #This program prints a bunch of python dictionaries.
-#In this program I learn to work with dictionaries in python and their key-value pairs.
+#In this program I learn to work with dictionaries in python
+# and their key-value pairs.
 
 alien_0 = {'colour': 'green', 'points': 5}
 

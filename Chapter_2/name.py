@@ -52,8 +52,10 @@ print(famous_person.title())
 print(famous_person.upper())
 print(famous_person.lower())
 
-print("\n" + famous_person.title() + ' once said, "Unless the unconscious is made conscious, it will control the life and you will call it fate."\n')
+print('\n{}once said, "Unless the unconscious is made conscious,\
+ it will control the life and you will call it fate."\n' .format(famous_person.title()))
 
-quote = ' once said "Unless the unconscious is made conscious, it will control the life and you will call it fate."\n'
+quote = ' once said "Unless the unconscious is made conscious,\
+ it will control the life and you will call it fate."\n'
 
 print(famous_person.title() + quote)
