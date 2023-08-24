@@ -1,0 +1,21 @@
+In python you can use the open() function to open a file. 
+    However, this file will not automatically close 
+    you will need to use a close() function to close the file or it will nevesr close.
+In python you can use the word with to automatically close a file that was opened using the open() function.
+In python you can use the print() function to print or show things on the terminal.
+In python you can use the len() function to tell the length of a variable.
+In python you can use the int() or the float() function to convert 
+    a string variable to an integer or a float.
+In python you can make function as modules and use the import 
+    word to copy import the code in the function to your python code.
+In python you can use the str() function to convert a non-string variable to a string.
+In python you can the if, if..else, if...elif, if..elif..else, or the switch...case
+    as confitional statement.
+In python you use the strip(), rstrip(), and lstrip() functions to eliminate white spaces.
+In python you can use the the for loop or while loop to repeat an action.
+In python you can use integer, string, float, and boolean variables.
+In python you can create a list, tuple, or a dictionary to store a lot of related in formation.
+In python a tuple is a list which the contents cannot be changed.
+In python you use the input() function to get information from a user.
+In python you use the .append() and .insert() to add itemps to a list.
+In python you can use del statement.

@@ -1,0 +1,4 @@
+This is why Alfred loves programming;
+	'I love working with data.'
+This is why John loves programming;
+	'I love making games.'
