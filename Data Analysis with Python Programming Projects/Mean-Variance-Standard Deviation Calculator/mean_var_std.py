@@ -85,8 +85,8 @@ def calculate(digits):
       'mean': [list(m_axis1), list(m_axis2), m_flattened],
       'variance': [list(v_axis1), list(v_axis2), v_flattened],
       'standard deviation': [list(std_axis1), list(std_axis2), std_flattened],
-      'max_value': [list(max_axis1), list(max_axis2), max_flattened],
-      'min_value': [list(min_axis1), list(min_axis2), min_flattened],
+      'max': [list(max_axis1), list(max_axis2), max_flattened],
+      'min': [list(min_axis1), list(min_axis2), min_flattened],
       'sum': [list(sum_axis1), list(sum_axis2), sum_flattened],
       # 'cumulative sum': [list(cs_axis1), list(cs_axis2), list(cs_flattend)],
     }
@@ -94,9 +94,5 @@ def calculate(digits):
     return calculations
 
   except ValueError:
-      raise ValueError("List must contain nine numbers")
-
-        
-
-values = [2,6,2,8,4,0,1,5,7]
-print(calculate(values))
+      raise ValueError("List must contain nine numbers.")
+  
