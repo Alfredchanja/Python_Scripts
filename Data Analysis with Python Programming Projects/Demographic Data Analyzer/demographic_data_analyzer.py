@@ -20,8 +20,23 @@ def calculate_demographic_data():
   # print(race_count)
 
   # What is the average age of men
-  # average_age_men = df['age'].mean()
+  average_age_men = df[['sex', 'age']][df['sex'] == 'Male']['age'].mean()
 
-  # print(average_age_men)
+  # Average age of females.
+  # average_age_women = df[['sex', 'age']][df['sex'] == 'Female']['age'].mean()
 
+  print(average_age_men)
+  # print(average_age_women)
+  # print(df.isnull())
+  # print(df.notnull())
+  # print(df.info())
+  # print(df.shape)
+  # print(df.isnull().sum())
+  # print(df.notna().sum())
+  # print(df.any())
+  # print(df.all())
+  # print(df['sex'].unique())
+  # print(df['sex'].value_counts())
+  # print(df['race'].unique())
+  # print(df['race'].value_counts())
 calculate_demographic_data()
