@@ -58,15 +58,18 @@ def calculate_demographic_data():
     # Percentage with salary greater than 50k.
   higher_education_rich = (df[df['education'].isin(higher_education) & 
     (df['salary'] == '>50K')]['salary'].count() / df[df['education'].isin(higher_education)]['salary'].count() * 100)
+  
+  # Alternative code
   # higher_education_rich = df[['education', 'salary']][((df['education'] == 'Bachelors') | 
     # (df['education'] == 'Masters') | (df['education'] == 'Doctorate')) & (df['salary'] == '>50K')]
     # ['salary'].count() * 100 / df[['education', 'salary']][(df['education'] == 'Bachelors') | 
     # (df['education'] == 'Masters') | (df['education'] == 'Doctorate')]['salary'].count()
-  lower_education_rich = (df[df['education'].isin(lower_education) & 
-    (df['salary'] == '>50k')]['salary'].count() / df[df['education'].isin(lower_education)]['salary'].count() * 100)
+  
+  # lower_education_rich = (df[df['education'].isin(lower_education) & 
+    # (df['salary'] == '>50k')]['salary'].count() / df[df['education'].isin(lower_education)]['salary'].count() * 100)
 
   print(higher_education_rich)
-  print(lower_education_rich)
+  # print(lower_education_rich)
   # print(df['salary'].count())
 
 calculate_demographic_data()
