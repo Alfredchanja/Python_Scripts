@@ -39,4 +39,34 @@ def calculate_demographic_data():
   # print(df['sex'].value_counts())
   # print(df['race'].unique())
   # print(df['race'].value_counts())
+
+  # What is the percentage of people who have a Bachelor's degree.
+  percentage_bachelors = (df['education'] == 'Bachelors').mean() * 100
+
+  print(percentage_bachelors)
+
+  # What percentage of people with advanced education (Bachelors, Masters, or Doctorate) make more than 50K?
+
+    # With and without 'Bachelors', 'Masters', or 'Doctorate'
+  
+  higher_education = df['education'][(df['education'] == 'Bachelors') | (df['education'] == 'Masters') | (df['education'] == 'Doctorate')]
+  lower_education = df['education'][(df['education'] != 'Bachelors') & (df['education'] != 'Masters') & (df['education'] != 'Doctorate')]
+
+  # print(higher_education)
+  print(lower_education)
+
+    # Percentage with salary greater than 50k.
+  higher_education_rich = (df[df['education'].isin(higher_education) & 
+    (df['salary'] == '>50K')]['salary'].count() / df[df['education'].isin(higher_education)]['salary'].count() * 100)
+  # higher_education_rich = df[['education', 'salary']][((df['education'] == 'Bachelors') | 
+    # (df['education'] == 'Masters') | (df['education'] == 'Doctorate')) & (df['salary'] == '>50K')]
+    # ['salary'].count() * 100 / df[['education', 'salary']][(df['education'] == 'Bachelors') | 
+    # (df['education'] == 'Masters') | (df['education'] == 'Doctorate')]['salary'].count()
+  lower_education_rich = (df[df['education'].isin(lower_education) & 
+    (df['salary'] == '>50k')]['salary'].count() / df[df['education'].isin(lower_education)]['salary'].count() * 100)
+
+  print(higher_education_rich)
+  print(lower_education_rich)
+  # print(df['salary'].count())
+
 calculate_demographic_data()
