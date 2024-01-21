@@ -20,7 +20,7 @@ def calculate_demographic_data():
   # print(race_count)
 
   # What is the average age of men
-  average_age_men = df[['sex', 'age']][df['sex'] == 'Male']['age'].mean()
+  average_age_men = df[['sex', 'age']][df['sex'] == 'Male']['age'].mean().round(1)
 
   # Average age of females.
   # average_age_women = df[['sex', 'age']][df['sex'] == 'Female']['age'].mean()
@@ -41,7 +41,7 @@ def calculate_demographic_data():
   # print(df['race'].value_counts())
 
   # What is the percentage of people who have a Bachelor's degree.
-  percentage_bachelors = (df['education'] == 'Bachelors').mean() * 100
+  percentage_bachelors = ((df['education'] == 'Bachelors').mean() * 100).round(1)
 
   print(percentage_bachelors)
 
@@ -56,8 +56,8 @@ def calculate_demographic_data():
   # print(lower_education.count())
 
   # Percentage with salary greater than 50k.
-  higher_education_rich = (df[df['education'].isin(higher_education) & 
-    (df['salary'] == '>50K')]['salary'].count() / df[df['education'].isin(higher_education)]['salary'].count() * 100)
+  higher_education_rich = ((df[df['education'].isin(higher_education) & 
+    (df['salary'] == '>50K')]['salary'].count() / df[df['education'].isin(higher_education)]['salary'].count() * 100)).round(1)
   
         # Alternative code
         # higher_education_rich = df[['education', 'salary']][((df['education'] == 'Bachelors') | 
@@ -65,10 +65,10 @@ def calculate_demographic_data():
         #   ['salary'].count() * 100 / df[['education', 'salary']][(df['education'] == 'Bachelors') | 
         #   (df['education'] == 'Masters') | (df['education'] == 'Doctorate')]['salary'].count()
 
-  lower_education_rich = df[['education', 'salary']][((df['education'] != 'Bachelors') & 
+  lower_education_rich = (df[['education', 'salary']][((df['education'] != 'Bachelors') & 
     (df['education'] != 'Masters') & (df['education'] != 'Doctorate')) & 
     (df['salary'] == '>50K')]['salary'].count() * 100 / df[['education', 'salary']][(df['education'] != 'Bachelors') & 
-    (df['education'] != 'Masters') & (df['education'] != 'Doctorate')]['salary'].count()
+    (df['education'] != 'Masters') & (df['education'] != 'Doctorate')]['salary'].count()).round(1)
 
   print(higher_education_rich)
   print(lower_education_rich)
@@ -80,7 +80,7 @@ def calculate_demographic_data():
 
   # What percentage of people who work the minimum number of hours per week have a salary of more than 50k.
 
-  num_min_workers = df[['hours-per-week', 'salary']][(df['hours-per-week'] == min_work_hours) & (df['salary'] == '>50K')]['salary'].count() * 100 / total
+  num_min_workers = (df[['hours-per-week', 'salary']][(df['hours-per-week'] == min_work_hours) & (df['salary'] == '>50K')]['salary'].count() * 100 / total).round(1)
 
   print(min_work_hours)
   print(total)
