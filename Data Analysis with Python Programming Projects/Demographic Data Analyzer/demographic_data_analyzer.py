@@ -63,7 +63,7 @@ def calculate_demographic_data():
         # higher_education_rich = df[['education', 'salary']][((df['education'] == 'Bachelors') | 
         #   (df['education'] == 'Masters') | (df['education'] == 'Doctorate')) & (df['salary'] == '>50K')]
         #   ['salary'].count() * 100 / df[['education', 'salary']][(df['education'] == 'Bachelors') | 
-        #   (df['education'] == 'Masters') | (df['education'] == 'Doctorate')]['salary'].count()
+        #   (df['education'] == 'Masters') | (df['eduzcation'] == 'Doctorate')]['salary'].count()
 
   lower_education_rich = (df[['education', 'salary']][((df['education'] != 'Bachelors') & 
     (df['education'] != 'Masters') & (df['education'] != 'Doctorate')) & 
@@ -87,8 +87,12 @@ def calculate_demographic_data():
   print(num_min_workers)
   
   # What country has the highest percentage of people that earn >50K and what is that percentage.
-  highest_earning_country = df[['native-country','salary']]
+  highest_income_df = df[df['salary'] == '>50K']
+  highest_earning_country = (highest_income_df[['native-country','salary']]['native-country'].value_counts()/df['native-country'].value_counts() * 100).idxmax()
+  highest_earning_country_percentage = (highest_income_df[['native-country','salary']]['native-country'].value_counts()/df['native-country'].value_counts() * 100).max().round(1)
 
+  # print(highest_income_df)
   print(highest_earning_country)
+  print(highest_earning_country_percentage)
   
 calculate_demographic_data()
